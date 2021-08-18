@@ -8,26 +8,10 @@ using SalesWebMvc.Models;
 
 namespace SalesWebMvc.Controllers
 {
-    public class HomeController : Controller
+    public class SobreController : Controller
     {
         public IActionResult Index()
         {
-            return View();
-        }
-
-        /*
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Sistema de Vendas Web MVC C# .Not";
-            ViewData["Desenvolvedor"] = "RONISVONN GOMES DA SILVA";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
             return View();
         }
 
@@ -41,6 +25,6 @@ namespace SalesWebMvc.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-        */
+        
     }
 }
