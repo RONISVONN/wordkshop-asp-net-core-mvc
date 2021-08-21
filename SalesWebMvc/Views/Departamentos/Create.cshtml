@@ -4,29 +4,66 @@
     ViewData["Title"] = "Create";
 }
 
-<h2>Create</h2>
 
-<h4>Departamento</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+<body style="background-color: #D0D0D0">
+
+    <h2 style="text-align: center; margin-top: 50px">Cadastro de Departamento</h2>
+
+    <!--<h4>Departamento</h4>-->
+
+    <hr />
+
+    <div class="container" style="background-color: ##D0D0D0; margin-top: 50px">
+        <div class="row" style="max-width: 600px; margin:auto">
+            <div class="col-md-12" style="background-color: #D0D0D0">
+
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label">Nome :</label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group" style="text-align: center; margin-top: 50px">
+
+                        <button class="btn btn-default" asp-action="Index">
+                            <img src="~/images/btnVoltar.png" style="width: 32px; height: 32px" />
+                            <br />
+                            Voltar
+                        </button>
+
+                        &nbsp;&nbsp;
+
+                        <button class="btn btn-default" type="submit" value="Salvar">
+                            <img src="~/images/bntSalvar.png" style="width: 32px; height: 32px" />
+                            <br />
+                            Salvar
+                        </button>
+
+
+                        <!--
+                        <button class="btn btn-default" asp-action="Index">Voltar</button>
+                        <button class="btn btn-default" type="submit" value="Salvar">Salvar</button>
+                        -->
+
+                        <!--<button class="btn" style="color: white; background-color: #18BC9C; border-bottom-color: #18BC9C" type="submit" value="Salvar">Salvar</button>-->
+                        <!--<input class="btn btn-default" style="color: white; background-color: #18BC9C; border-bottom-color: #18BC9C" type="submit" value="Salvar" />-->
+                    </div>
+                </form>
+
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </form>
+        </div>
     </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
+    <!--
+    <div>
+        <a asp-action="Index">Volta à lista</a>
+    </div>
+    -->
+</body>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
